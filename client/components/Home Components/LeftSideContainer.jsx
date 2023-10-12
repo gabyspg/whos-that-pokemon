@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { useSelector, useDispatch } from 'react-redux';
 /*
 
 /////// LEFT SIDE CONTAINER \\\\\\\
@@ -10,8 +10,14 @@ Displays high score and current score (which User Input resets to 0 upon failing
 */
 
 const LeftSideContainer = (props) => {
+  let userHighScore = useSelector(
+    (state) => state.pokemon.userInfo.userHighScore
+  );
+  if (userHighScore === '') {
+    userHighScore = 0;
+  }
   const { score, pokemon } = props;
-  const [highScore, setHighScore] = useState(0);
+  const [highScore, setHighScore] = useState(userHighScore);
 
   //This condition hides the score if no pokemon has been fetched.
   if (!pokemon.imageURL) {

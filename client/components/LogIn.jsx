@@ -73,6 +73,7 @@ const LogIn = () => {
         <Button
           variant='contained'
           onClick={(event) => signIn(event, username, password)}
+          sx={{ backgroundColor: '#2c387e' }}
         >
           Log In
         </Button>

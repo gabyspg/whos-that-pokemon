@@ -58,7 +58,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className='mainContain'>
       <NavBar />
       <div className='logInForm'>
         <UserInfoInput
@@ -70,6 +70,7 @@ const SignUp = () => {
         <Button
           variant='contained'
           onClick={(event) => signUp(event, username, password)}
+          sx={{ backgroundColor: '#2c387e' }}
         >
           Sign Up
         </Button>

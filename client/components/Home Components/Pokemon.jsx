@@ -4,7 +4,7 @@ import playButton from '../../images/playButton.png';
 
 const Pokemon = (props) => {
   const { pokemon, getNewPokemon, hardmode, setHardmode } = props;
-
+  console.log(pokemon.name);
   // when page first loads (pokemon = {}) serve static image as start button
   if (!pokemon.imageURL) {
     return (

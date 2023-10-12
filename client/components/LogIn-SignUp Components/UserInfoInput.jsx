@@ -14,7 +14,6 @@ const UserInfoInput = (props) => {
         autoComplete='off'
         name='username'
         type='string'
-        placeholder='Username'
         value={username}
         onChange={(event) => handleUsernameChange(event)}
         sx={{
@@ -28,7 +27,6 @@ const UserInfoInput = (props) => {
         variant='outlined'
         autoComplete='off'
         name='password'
-        placeholder='Password'
         value={password}
         onChange={(event) => handlePasswordChange(event)}
         sx={{
