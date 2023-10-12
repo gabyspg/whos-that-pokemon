@@ -19,6 +19,7 @@ leaderboardController.getHighScores = async (req, res, next) => {
 }
 
 leaderboardController.getUserAndUpdate = async (req, res, next) => {
+        console.log(req.body)
     try{
         const username = req.body.username;
         const newUserHighScore = req.body.userHighScore;
